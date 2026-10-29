@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Petal | My To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div>
+        <p class="eyebrow">A LITTLE SPACE FOR YOUR DAY</p>
+        <h1>My day, <span>my way.</span></h1>
+        <p class="subtitle">Small steps are still progress. ♡</p>
+      </div>
+      <div class="flower">✿</div>
+    </header>
+
+    <section class="progress-card">
+      <div class="progress-top">
+        <div>
+          <p class="muted">TODAY'S PROGRESS</p>
+          <h2 id="progressText">A fresh start ✨</h2>
+        </div>
+        <div class="progress-number" id="progressNumber">0%</div>
+      </div>
+      <div class="track"><div id="progressBar"></div></div>
+    </section>
+
+    <form id="taskForm" class="add-form">
+      <input id="taskInput" type="text"
+        placeholder="What would you like to do?" maxlength="120"
+        autocomplete="off" required>
+      <button type="submit" aria-label="Add task">＋</button>
+    </form>
+
+    <nav class="filters" aria-label="Filter tasks">
+      <button type="button" class="filter active" data-filter="all">All</button>
+      <button type="button" class="filter" data-filter="active">To do</button>
+      <button type="button" class="filter" data-filter="completed">Done ♡</button>
+    </nav>
+
+    <section class="task-section">
+      <div class="section-heading">
+        <h2>Your little list</h2>
+        <span id="taskCount">0 tasks</span>
+      </div>
+      <ul id="taskList"></ul>
+      <div id="emptyState" class="empty">
+        <div>🌷</div>
+        <h3>Nothing here just yet</h3>
+        <p>Add a little task and make today lovely.</p>
+      </div>
+    </section>
+
+    <footer>One thing at a time. You're doing great! ♡</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
